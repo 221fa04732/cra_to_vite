@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: #0e0e10;
+  --card-bg: #1c1c24;
+  --text-color: #eaeaea;
+  --accent-color: #6366f1;
+  --accent-hover: #8183f5;
+  --shadow-color: rgba(0, 0, 0, 0.6);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.intro-section {
   min-height: 100vh;
+  background-color: var(--bg-color);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.intro-box {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 50px 40px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 12px 30px var(--shadow-color);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.intro-box:hover {
+  transform: translateY(-5px);
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.intro-text {
+  font-size: 1.125rem;
+  color: #b3b3c3;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.intro-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.intro-doc-button {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.intro-doc-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
 }
